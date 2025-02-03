@@ -34,3 +34,9 @@ model.fit(X_train, y_train, epochs=10, validation_data=(X_val, y_val))
 # Simpan Model ke dalam file .h5
 model.save('model_age_cnn.h5')
 print("✅ Model CNN berhasil disimpan sebagai 'model_age_cnn.h5'")
+
+# Tambahkan kompilasi sebelum menyimpan model
+model.compile(optimizer="adam", loss="mean_squared_error", metrics=["mae"])
+
+# Simpan ulang model setelah dikompilasi
+model.save("model_age_cnn.h5")
