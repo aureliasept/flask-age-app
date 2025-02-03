@@ -1,0 +1,9 @@
+# Ignore model file
+model_age_cnn.h5
+
+# Ignore virtual environment
+venvku/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
